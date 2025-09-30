@@ -1,0 +1,191 @@
+/* Reset et base */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* En-tête */
+header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #4CAF50;
+}
+
+.icons {
+  font-size: 24px;
+  margin: 8px 0;
+}
+
+.subtitle {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 5px;
+}
+
+/* Infos pratiques */
+.infos {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.infos-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.button {
+  display: inline-block;
+  background-color: #4CAF50;
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Calendrier */
+.calendrier {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+}
+
+.calendrier-image {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 15px auto;
+  display: block;
+  border: 1px solid #ddd;
+}
+
+/* Légende */
+.legende {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.legende-item {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.legende-item span {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  text-align: center;
+  line-height: 20px;
+  font-weight: bold;
+  border: 1px solid #ddd;
+}
+
+.vacances { background-color: #81D4FA; }
+.no-distrib { background-color: #FFEB3B; }
+.no-pain { background-color: white; color: #4CAF50; }
+.no-brebis { background-color: white; color: #E91E63; }
+
+/* Pied de page */
+footer {
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #ddd;
+  font-size: 12px;
+  color: #666;
+}
+
+a {
+  color: #4CAF50;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Media Queries pour tablettes et ordinateurs */
+@media (min-width: 600px) {
+  .infos-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .legende {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+  }
+
+  .calendrier-image {
+    max-width: 800px;
+  }
+
+  header {
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+  }
+
+  .infos, .calendrier {
+    padding: 20px;
+  }
+
+  .legende-item {
+    font-size: 16px;
+  }
+}
+
+/* Media Query pour grands écrans */
+@media (min-width: 900px) {
+  .container {
+    max-width: 1000px;
+  }
+
+  .calendrier-image {
+    max-width: 900px;
+  }
+}
+
+/* Optimisation pour mobile */
+@media (max-width: 400px) {
+  .container {
+    padding: 10px;
+  }
+
+  .infos, .calendrier {
+    padding: 10px;
+  }
+
+  .legende {
+    grid-template-columns: 1fr;
+  }
+
+  .button {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}
